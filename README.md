@@ -88,7 +88,3 @@ fitness_app/
 ## Licença
 
 Este projeto está sob a licença MIT.
-
----
-
-Se quiser, posso ajustar ou incluir mais detalhes específicos!
