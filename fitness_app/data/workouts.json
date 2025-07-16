@@ -1,0 +1,74 @@
+[
+  {
+    "nome": "Full Body Iniciante",
+    "nivel": "iniciante",
+    "objetivo": "hipertrofia",
+    "exercicios": [
+      {"grupo": "peitoral", "exercicio": "Supino máquina", "series": 2, "repeticoes": 12},
+      {"grupo": "costas", "exercicio": "Remada máquina", "series": 2, "repeticoes": 12},
+      {"grupo": "pernas", "exercicio": "Agachamento goblet", "series": 2, "repeticoes": 12},
+      {"grupo": "ombros", "exercicio": "Desenvolvimento máquina", "series": 2, "repeticoes": 12},
+      {"grupo": "abdomen", "exercicio": "Prancha", "series": 2, "repeticoes": 30}
+    ]
+  },
+  {
+    "nome": "ABC Iniciante",
+    "nivel": "iniciante",
+    "objetivo": "emagrecimento",
+    "exercicios": [
+      {"grupo": "peitoral", "exercicio": "Flexões no solo", "series": 2, "repeticoes": 15},
+      {"grupo": "costas", "exercicio": "Puxada frontal", "series": 2, "repeticoes": 12},
+      {"grupo": "pernas", "exercicio": "Ponte de glúteo", "series": 2, "repeticoes": 15},
+      {"grupo": "ombros", "exercicio": "Elevação lateral leve", "series": 2, "repeticoes": 12},
+      {"grupo": "abdomen", "exercicio": "Crunch básico", "series": 2, "repeticoes": 15}
+    ]
+  },
+  {
+    "nome": "Full Body Intermediário",
+    "nivel": "intermediario",
+    "objetivo": "hipertrofia",
+    "exercicios": [
+      {"grupo": "peitoral", "exercicio": "Supino com halteres", "series": 3, "repeticoes": 10},
+      {"grupo": "costas", "exercicio": "Remada curvada", "series": 3, "repeticoes": 10},
+      {"grupo": "pernas", "exercicio": "Agachamento frontal", "series": 3, "repeticoes": 10},
+      {"grupo": "ombros", "exercicio": "Desenvolvimento halteres", "series": 3, "repeticoes": 10},
+      {"grupo": "abdomen", "exercicio": "Russian twist", "series": 3, "repeticoes": 15}
+    ]
+  },
+  {
+    "nome": "AB Intermediário",
+    "nivel": "intermediario",
+    "objetivo": "forca",
+    "exercicios": [
+      {"grupo": "peitoral", "exercicio": "Crossover", "series": 3, "repeticoes": 12},
+      {"grupo": "costas", "exercicio": "Barra fixa", "series": 3, "repeticoes": 8},
+      {"grupo": "pernas", "exercicio": "Stiff", "series": 3, "repeticoes": 10},
+      {"grupo": "ombros", "exercicio": "Remada alta", "series": 3, "repeticoes": 10},
+      {"grupo": "abdomen", "exercicio": "Mountain climber", "series": 3, "repeticoes": 20}
+    ]
+  },
+  {
+    "nome": "Push Pull Avançado",
+    "nivel": "avancado",
+    "objetivo": "hipertrofia",
+    "exercicios": [
+      {"grupo": "peitoral", "exercicio": "Supino reto pesado", "series": 4, "repeticoes": 8},
+      {"grupo": "costas", "exercicio": "Levantamento terra", "series": 4, "repeticoes": 6},
+      {"grupo": "pernas", "exercicio": "Agachamento pistola", "series": 4, "repeticoes": 8},
+      {"grupo": "ombros", "exercicio": "Desenvolvimento militar pesado", "series": 4, "repeticoes": 8},
+      {"grupo": "abdomen", "exercicio": "Dragon flag", "series": 4, "repeticoes": 10}
+    ]
+  },
+  {
+    "nome": "ABCDE Avançado",
+    "nivel": "avancado",
+    "objetivo": "forca",
+    "exercicios": [
+      {"grupo": "peitoral", "exercicio": "Voador com drop-set", "series": 4, "repeticoes": 10},
+      {"grupo": "costas", "exercicio": "Barra fixa com peso", "series": 4, "repeticoes": 6},
+      {"grupo": "pernas", "exercicio": "Good morning", "series": 4, "repeticoes": 8},
+      {"grupo": "ombros", "exercicio": "Handstand push-up", "series": 4, "repeticoes": 6},
+      {"grupo": "abdomen", "exercicio": "Ab wheel", "series": 4, "repeticoes": 12}
+    ]
+  }
+]

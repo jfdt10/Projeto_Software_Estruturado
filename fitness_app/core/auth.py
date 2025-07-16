@@ -1,4 +1,4 @@
-from core.models import Usuario, usuario_from_dict
+from core.models import Usuario
 from core.database import usuarios, inserir_registro, obter_registros, usuario_existe
 from datetime import datetime
 
@@ -14,11 +14,11 @@ class ServicoAutenticacao:
     def autenticar_usuario(self, email, senha):
         for dado in obter_registros('usuarios'):
             if dado.get('email') == email and dado.get('senha') == senha:
-                return usuario_from_dict(dado)
+                return Usuario.from_dict(dado)
         return None
 
     def buscar_usuario_por_email(self, email):
         for dado in obter_registros('usuarios'):
             if dado.get('email') == email:
-                return usuario_from_dict(dado)
+                return Usuario.from_dict(dado)
         return None

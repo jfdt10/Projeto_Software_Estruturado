@@ -1,0 +1,37 @@
+[
+  {
+    "alimento": "Peito de frango",
+    "calorias": 120,
+    "proteina": 22.5,
+    "gordura": 2.6,
+    "carboidrato": 0
+  },
+  {
+    "alimento": "Peito de peru",
+    "calorias": 147,
+    "proteina": 30,
+    "gordura": 2,
+    "carboidrato": 0
+  },
+  {
+    "alimento": "Amêndoas",
+    "calorias": 579,
+    "proteina": 21,
+    "gordura": 50,
+    "carboidrato": 22
+  },
+  {
+    "alimento": "Batata-doce (cozida)",
+    "calorias": 86,
+    "proteina": 1.6,
+    "gordura": 0.1,
+    "carboidrato": 20
+  },
+  {
+    "alimento": "Brócolis (cozido)",
+    "calorias": 35,
+    "proteina": 2.4,
+    "gordura": 0.4,
+    "carboidrato": 7
+  }
+]
