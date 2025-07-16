@@ -1,8 +1,4 @@
-# PROJETO ESTRUTURADO APP FITNESS
-
-Claro! Aqui está um modelo de README.md estruturado para o seu projeto "PROJETO ESTRUTURADO APP FITNESS", baseado nas informações fornecidas:
-
----
+# PROJETO ESTRUTURADO APP FITNES
 
 # PROJETO ESTRUTURADO APP FITNESS
 
