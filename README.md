@@ -84,9 +84,6 @@ fitness_app/
   python fitness_app/app.py
   ```
 
-## Contribuição
-
-Contribuições são bem-vindas! Sinta-se livre para abrir issues e pull requests com melhorias, correções ou novas funcionalidades.
 
 ## Licença
 
