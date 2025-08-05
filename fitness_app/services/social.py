@@ -3,10 +3,13 @@ Serviço de Treino para o aplicativo de fitness.
 Este Módulo fornece  funciionalidades de social  como compartilhar progresso e participar de desafios
 """
 
-from core.models import Desafio
-from core.database import inserir_registro, obter_registros, atualizar_registro, deletar_registro
+from fitness_app.core.models import Desafio
+from fitness_app.core.database import inserir_registro, obter_registros, atualizar_registro_por_id, deletar_registro_por_id
 
 class ServicoSocial:
+    def __init__(self):
+        pass
+    
     def criar_desafio(self, nome, descricao, data_inicio, data_fim, participantes=None):
         desafio = Desafio(
             nome=nome,
@@ -22,16 +25,15 @@ class ServicoSocial:
             Desafio.from_dict(dado)
             for dado in obter_registros('desafios')
         ]
-
-    def participar_desafio(self, doc_id, usuario_email):
+    def participar_desafio(self, desafio_id, usuario_email):
         desafios = obter_registros('desafios')
         for desafio in desafios:
-            if desafio.doc_id == doc_id:
+            if desafio.doc_id == desafio_id:
                 participantes = desafio.get('participantes', [])
                 if usuario_email not in participantes:
                     participantes.append(usuario_email)
-                    atualizar_registro('desafios', doc_id, {"participantes": participantes})
+                    atualizar_registro_por_id('desafios', desafio_id, {"participantes": participantes})
                 break
 
-    def deletar_desafio(self, doc_id):
-        return deletar_registro('desafios', doc_id)
+    def deletar_desafio(self, desafio_id):
+        return deletar_registro_por_id('desafios', desafio_id)  

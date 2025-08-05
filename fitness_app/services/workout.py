@@ -3,21 +3,16 @@ Serviço de Treino para o aplicativo de fitness.
 Este módulo fornece funcionalidades para recomendar treinos, criar planos personalizados,
 """
 
-from core.models import PlanoTreino
-from core.database import inserir_registro, obter_registros, atualizar_registro, deletar_registro
-import json
-import os
+from fitness_app.core.models import PlanoTreino
+from fitness_app.core.database import inserir_registro, obter_registros, atualizar_registro_por_id, deletar_registro_por_id
+
 
 class ServicoTreino:
-    def __init__(self, caminho_workouts="data/workouts.json"):
-        self.caminho_workouts = caminho_workouts
-
+    def __init__(self):
+        pass
+    
     def recomendar_treinos(self, usuario):
-        """
-        Sugere treinos prontos do workouts.json baseados no nível e objetivo do usuário.
-        """
-        with open(self.caminho_workouts, encoding="utf-8") as f:
-            treinos = json.load(f)
+        treinos = obter_registros('treinos_prontos')
         recomendados = [
             t for t in treinos
             if t["nivel"] == usuario.nivel_experiencia and t["objetivo"] == usuario.objetivo
@@ -41,8 +36,8 @@ class ServicoTreino:
             if dado.get('usuario_email') == usuario_email
         ]
 
-    def atualizar_plano(self, doc_id, novos_dados: dict):
-        return atualizar_registro('planos_treino', doc_id, novos_dados)
+    def atualizar_plano(self, plano_id, novos_dados: dict):
+        return atualizar_registro_por_id('planos_treino', plano_id, novos_dados)
 
-    def deletar_plano(self, doc_id):
-        return deletar_registro('planos_treino', doc_id)
+    def deletar_plano(self, plano_id):
+        return deletar_registro_por_id('planos_treino', plano_id)

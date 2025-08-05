@@ -1,12 +1,17 @@
 from tinydb import TinyDB, Query
 from datetime import datetime
+import os
 
 
-# Banco de dados fitness_app
-db = TinyDB('fitness.json')
+
+os.makedirs('fitness_app/data', exist_ok=True)
+
+db = TinyDB('fitness_app/data/fitness.json')
+
 
 usuarios = db.table('usuarios')
 planos_treino = db.table('planos_treino') 
+wearable = db.table('wearable')
 atividades = db.table('atividades')  
 nutricao = db.table('nutricao')  
 metas = db.table('metas')  
@@ -14,14 +19,20 @@ desafios = db.table('desafios')
 videos = db.table('videos')  
 recomendacoes = db.table('recomendacoes')  
 feedbacks = db.table('feedbacks')  
-forum = db.table('forum')  
-wearable = db.table('wearable')  
+posts_forum = db.table('posts_forum')
+comentarios_forum = db.table('comentarios_forum')
+
+
 
 
 def inserir_registro(tabela, dados):
-    dados['criado_em'] = datetime.now().isoformat()
+    dados['criado_em'] = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
     return db.table(tabela).insert(dados)
 
+def atualizar_usuario(email, dados_usuario):
+    Q = Query()
+    usuarios.update(dados_usuario, Q.email == email)
+    return True
 
 def obter_registros(tabela, query=None):
     if query:
@@ -29,13 +40,24 @@ def obter_registros(tabela, query=None):
     return db.table(tabela).all()
 
 
-def atualizar_registro(tabela, doc_id, dados):
-    return db.table(tabela).update(dados, doc_ids=[doc_id])
 
+def deletar_registro_por_id(tabela, id_model):
+    Q = Query()
+    results = db.table(tabela).search(Q.id == id_model)
+    if results:
+        doc_ids = [r.doc_id for r in results]
+        db.table(tabela).remove(doc_ids=doc_ids)
+        return True
+    return False
 
-def deletar_registro(tabela, doc_id):
-    return db.table(tabela).remove(doc_ids=[doc_id])
-
+def atualizar_registro_por_id(tabela, id_model, novos_dados):
+    Q = Query()
+    results = db.table(tabela).search(Q.id == id_model)
+    if results:
+        doc_ids = [r.doc_id for r in results]
+        db.table(tabela).update(novos_dados, doc_ids=doc_ids)
+        return True
+    return False
 
 def usuario_existe(nome=None, email=None):
     Usuario = Query()
@@ -61,12 +83,8 @@ def importar_banco(arquivo='backup_fitness_app.json'):
     db.storage.write(dados)
     print(f"Dados importados de {arquivo}")
 
-
-
-
 __all__ = [
     "db", "usuarios", "planos_treino", "atividades", "nutricao", "metas",
     "desafios", "videos", "recomendacoes", "feedbacks", "forum", "wearable",
     "inserir_registro", "obter_registros", "atualizar_registro", "deletar_registro", "usuario_existe",
-    "backup_banco", "importar_banco"
-]
+    "backup_banco", "importar_banco", "deletar_registro_por_id", "atualizar_registro_por_id"]

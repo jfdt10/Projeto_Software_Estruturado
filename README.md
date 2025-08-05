@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Aplicativo de fitness completo, desenvolvido em Python, utilizando arquitetura orientada a objetos e banco de dados TinyDB (JSON). O projeto inicialmente será no terminal com previsão futura para uso de interface de prototipagem streamlit.
+Aplicativo de fitness completo, desenvolvido em Python, utilizando arquitetura orientada a objetos e banco de dados TinyDB (JSON). O projeto inicialmente será no terminal.
 
 ## Funcionalidades Principais
 
@@ -23,9 +23,7 @@ Aplicativo de fitness completo, desenvolvido em Python, utilizando arquitetura o
 fitness_app/
 │
 ├── main.py                # Entrada do app no terminal (CLI)
-├── app.py                 # Entrada para futura interface Streamlit
 ├── requirements.txt
-├── fitness.json           # Banco de dados TinyDB
 │
 ├── core/
 │   ├── __init__.py
@@ -41,17 +39,16 @@ fitness_app/
 │   ├── goal.py            # Serviço de metas e progresso
 │   ├── wearable.py        # Serviço de integração com wearables
 │   ├── social.py          # Serviço de desafios e social
-│   ├── video.py           # (Em breve) Serviço de vídeos
-│   ├── recommendation.py  # (Em breve) Serviço de recomendações
-│   ├── feedback.py        # (Em breve) Serviço de feedback
-│   └── forum.py           # (Em breve) Serviço de fórum
+│   ├── video.py           # Serviço de vídeos
+│   ├── recommendation.py  # Serviço de recomendações
+│   ├── feedback.py        # Serviço de feedback
+│   └── forum.py           # Serviço de fórum
 │
 ├── data/
 │   ├── workouts.json         # Exemplos de treinos prontos
 │   ├── food_database.json    # Base de dados de alimentos
-│   ├── metas.json            # Exemplos de metas
-│   ├── wearable.csv   # Exemplo de dados de wearable
-│   └── video_library.json    # (Em breve) Base de vídeos
+│   ├── wearable.csv 
+|   ├── fitness.json # Banco de Dados a qual é registrado o TinyDb
 ```
 
 ## Instalação
@@ -77,17 +74,23 @@ fitness_app/
 
 - **Terminal (CLI):**
   ```bash
-  python fitness_app/main.py
+  python -m fitness_app.main
   ```
+<<<<<<< HEAD
 - **Interface Web (em breve):**
   ```bash
   python fitness_app/app.py
   ```
+=======
+>>>>>>> 133eb65 (Atualiza projeto versão final)
 
 ## Licença
 
 Este projeto está sob a licença MIT.
+<<<<<<< HEAD
 
 ---
 
 Se quiser, posso ajustar ou incluir mais detalhes específicos!
+=======
+>>>>>>> 133eb65 (Atualiza projeto versão final)
