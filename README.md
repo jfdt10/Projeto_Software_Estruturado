@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Aplicativo de fitness completo, desenvolvido em Python, utilizando arquitetura orientada a objetos e banco de dados TinyDB (JSON). O projeto inicialmente será no terminal.
+Aplicativo de fitness completo, desenvolvido em Python, utilizando arquitetura orientada a objetos e banco de dados TinyDB (JSON). O projeto será no terminal.
 
 ## Funcionalidades Principais
 
