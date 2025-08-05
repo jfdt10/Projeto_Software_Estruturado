@@ -80,17 +80,10 @@ fitness_app/
 - **Interface Web (em breve):**
   ```bash
   python fitness_app/app.py
-  ```
-=======
->>>>>>> 133eb65 (Atualiza projeto versão final)
+  ``
+
 
 ## Licença
 
 Este projeto está sob a licença MIT.
-<<<<<<< HEAD
 
----
-
-Se quiser, posso ajustar ou incluir mais detalhes específicos!
-=======
->>>>>>> 133eb65 (Atualiza projeto versão final)
