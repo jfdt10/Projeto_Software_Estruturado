@@ -76,11 +76,7 @@ fitness_app/
   ```bash
   python -m fitness_app.main
   ```
-<<<<<<< HEAD
-- **Interface Web (em breve):**
-  ```bash
-  python fitness_app/app.py
-  ``
+
 
 
 ## Licença
